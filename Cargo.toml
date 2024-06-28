@@ -1,0 +1,13 @@
+[package]
+name = "online-test"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+let-engine = {path = "../let-engine/let-engine", default-features = false, features = [ "physics", "serde", "networking" ] }
+tracing = "0.1.40"
+tracing-subscriber = "0.3.18"
+
+[features]
+default = [ "client" ]
+client = [ "let-engine/client" ]
